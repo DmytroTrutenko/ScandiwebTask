@@ -11,47 +11,51 @@
 </head>
 <body>
 <div class="container">
+
+
     <form action="addCard.php" class="form_wrap" method="post">
         <div class="header">
             <h1>Product Add</h1>
-            <button type="submit" class="btn btn-primary">Save</button>
-            <button type="reset" class="btn btn-success" onclick="window.location.href='index.php'">Cancel</button>
+            <button type="submit" class="btn btn-primary" name="submitCard">Save</button>
+            <button type="reset" class="btn btn-success" onclick="window.location.href='index.php'" >Cancel</button>
         </div>
         <div class="product__add">
             <div class="input_group">
                 <p>
                     SKU
                 </p>
-                <input type="text" class="sku" name="sku" id="sku" placeholder="Unique for each product" required>
+                <input type="text" class="sku" name="sku" id="sku" placeholder="Unique for each product">
             </div>
             <div class="input_group">
                 <p>
                     NAME
                 </p>
-                <input type="text" class="name" name="name" id="name" placeholder="Enter your name" required>
+                <input type="text" class="name" name="name" id="name" placeholder="Enter your name">
             </div>
             <div class="input_group">
                 <p>
                     Price($)
                 </p>
-                <input type="text" class="price" name="price" id="price" placeholder="Enter price" required>
+                <input type="text" class="price" name="price" id="price" placeholder="Enter price">
             </div>
             <div class="input_group">
                 <p>
                     Type Switcher
                 </p>
                 <select class="switcher" name="switcher" id="switcher">
-                    <option value="dvd" selected>DVD</option>
+                    <option value="dvd">DVD</option>
                     <option value="book">Book</option>
                     <option value="furniture">Furniture</option>
                 </select>
             </div>
-
-            <div class="input_group toggle-form" id="dvd">
-                <p>
-                    Size(MB)
-                </p>
-                <input type="text" class="size" name="size" id="size"  placeholder="Enter size">
+            <div class="dvd toggle-form" id="dvd">
+                <div class="input_group" >
+                    <p>
+                        Size(MB)
+                    </p>
+                    <input type="text" class="size dvd" name="size" id="size" placeholder="Enter size">
+                </div>
+                <p>“Please, provide size”</p>
             </div>
 
             <div class="furniture toggle-form" id="furniture">
@@ -59,28 +63,33 @@
                     <p>
                         Height(CM)
                     </p>
-                    <input type="text" class="height" name="height" id="height" placeholder="Enter height">
+                    <input type="text" class="height furniture" name="height" id="height" placeholder="Enter height">
                 </div>
                 <div class="input_group">
                     <p>
                         Width(CM)
                     </p>
-                    <input type="text" class="width" name="width" id="width" placeholder="Enter width">
+                    <input type="text" class="width furniture" name="width" id="width" placeholder="Enter width">
                 </div>
                 <div class="input_group">
                     <p>
                         Lenght(CM)
                     </p>
-                    <input type="text" class="lenght" name="lenght" id="lenght" placeholder="Enter lenght">
+                    <input type="text" class="lenght furniture" name="lenght" id="lenght" placeholder="Enter lenght">
                 </div>
+                <p>“Please, provide dimensions”</p>
             </div>
 
-            <div class="input_group toggle-form" id="book">
-                <p>
-                    Weight(KG)
-                </p>
-                <input type="text" class="weight" name="weight" id="weight" placeholder="Enter weight">
+            <div class="book toggle-form" id="book">
+                <div class="input_group">
+                    <p>
+                        Weight(KG)
+                    </p>
+                    <input type="text" class="weight book" name="weight" id="weight" placeholder="Enter weight">
+                </div>
+                <p>“Please, provide weight”</p>
             </div>
+
         </div>
         <div class="footer">
             <p>Scandiweb Test assignment</p>

@@ -1,6 +1,7 @@
 <?php
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
   $sku = $_POST['sku'];
   $name = $_POST['name'];
   $price = $_POST['price'];
