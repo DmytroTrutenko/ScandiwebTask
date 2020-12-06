@@ -31,13 +31,17 @@
                              <input type="checkbox" name="check_list[]" value='.$row['SKU'].'>
                              <span>'.$row['SKU'].'</span>
                              <span>'.$row['NAME'].'</span>
-                             <span>'.$row['Price'].'</span>
-                             <span>'.$row['Size'].'</span>
-                             <span>'.$row['Height'].'</span>
-                             <span>'.$row['Width'].'</span>
-                             <span>'.$row['Lenght'].'</span>
-                             <span>'.$row['Weight'].'</span>
-                             <span class="check"></span>
+                             <span>'.$row['Price'].' $</span>';
+                    if($row['Size'] != 0){
+                        echo ' <span>'.$row['Size'].' MB</span>';
+                    }
+                    if($row['Height'] != 0 || $row['Width'] !=0 || $row['Lenght'] !=0){
+                        echo '<span>Dimensions: '.$row['Height'].'x'.$row['Width'].'x'.$row['Lenght'].'</span>';
+                    }
+                    if($row['Weight'] != 0){
+                        echo '<span>'.$row['Weight'].' KG</span>';
+                    }
+                    echo '<span class="check"></span>
                           </label>';
                 }
             }

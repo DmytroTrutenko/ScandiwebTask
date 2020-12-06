@@ -9,7 +9,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
   $height = $_POST['height'];
   $width = $_POST['width'];
   $lenght = $_POST['lenght'];
-  $weight = $_POST['weight'];
+
+  if(empty($_POST['weight'])){
+    $weight = null;
+  }else{
+    $weight = $_POST['weight'];
+  }
+
 }
 
 require 'configDB.php';
@@ -22,10 +28,6 @@ if($conn->query($sql) === TRUE){
 }else {
  	echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
-
-
-
-
 
 $conn->close();
 header('Location: /scandiwebtask/index.php');

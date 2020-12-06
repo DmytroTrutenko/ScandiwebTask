@@ -12,11 +12,10 @@
 <body>
 <div class="container">
 
-
     <form action="addCard.php" class="form_wrap" method="post">
         <div class="header">
             <h1>Product Add</h1>
-            <button type="submit" class="btn btn-primary" name="submitCard">Save</button>
+            <button type="submit" class="btn btn-primary btn_card" name="submitCard">Save</button>
             <button type="reset" class="btn btn-success" onclick="window.location.href='index.php'" >Cancel</button>
         </div>
         <div class="product__add">
@@ -55,7 +54,7 @@
                     </p>
                     <input type="text" class="size dvd" name="size" id="size" placeholder="Enter size">
                 </div>
-                <p>“Please, provide size”</p>
+                <span>“Please, provide size”</span>
             </div>
 
             <div class="furniture toggle-form" id="furniture">
@@ -77,7 +76,7 @@
                     </p>
                     <input type="text" class="lenght furniture" name="lenght" id="lenght" placeholder="Enter lenght">
                 </div>
-                <p>“Please, provide dimensions”</p>
+                <span>“Please, provide dimensions”</span>
             </div>
 
             <div class="book toggle-form" id="book">
@@ -87,10 +86,10 @@
                     </p>
                     <input type="text" class="weight book" name="weight" id="weight" placeholder="Enter weight">
                 </div>
-                <p>“Please, provide weight”</p>
+                <span>“Please, provide weight”</span>
             </div>
-
         </div>
+        <span class="error"></span>
         <div class="footer">
             <p>Scandiweb Test assignment</p>
         </div>
