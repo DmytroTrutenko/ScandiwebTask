@@ -131,13 +131,14 @@ input[type="checkbox"] {
 }
 
 .hide {
-  display: none!important;
-}
-.visibility{
-  display: block!important;
+  display: none !important;
 }
 
-.error{
+.visibility {
+  display: block !important;
+}
+
+.error {
   text-align: center;
   width: 300px;
   display: block;
@@ -148,3 +149,52 @@ input[type="checkbox"] {
   padding: 5px 10px;
   font-weight: 600;
 }
+
+
+@media (max-width: 991px) {
+  .product_item {
+    width: calc(100% / 3 - 20px);
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .product_item {
+    width: calc(100% / 2 - 15px);
+
+    &:nth-child(2n) {
+      margin-right: 0 !important;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 30px;
+    }
+  }
+}
+
+
+@media (max-width: 575px) {
+  .product__list{
+    .product_item {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto 30px!important;
+    }
+  }
+
+  .header {
+    flex-direction: column;
+  }
+  .header h1 {
+    margin: 0 auto 30px;
+  }
+
+}
+

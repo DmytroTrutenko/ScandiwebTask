@@ -15,8 +15,10 @@
     <form action="addCard.php" class="form_wrap" method="post">
         <div class="header">
             <h1>Product Add</h1>
+          <div>
             <button type="submit" class="btn btn-primary btn_card" name="submitCard">Save</button>
             <button type="reset" class="btn btn-success" onclick="window.location.href='index.php'" >Cancel</button>
+          </div>
         </div>
         <div class="product__add">
             <div class="input_group">

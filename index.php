@@ -14,8 +14,10 @@
     <form action="massdelete.php" method="post" class="form_wrap" >
         <div class="header">
             <h1>Product List</h1>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='add.php'">Add</button>
-            <button type="submit" class="btn btn-success">Mass delete</button>
+           <div>
+                       <button type="button" class="btn btn-primary" onclick="window.location.href='add.php'">Add</button>
+                       <button type="submit" class="btn btn-success">Mass delete</button>
+           </div>
         </div>
         <div class="product__list">
 
