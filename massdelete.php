@@ -1,10 +1,16 @@
 <?php
+require 'configDB.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $product_item = $_POST['check_list'];
-}
 
-require 'configDB.php';
+    if(empty($_POST['check_list'])) {
+    $conn->close();
+    header('Location: /scandiwebtask/index.php');
+    }else{
+    $product_item = $_POST['check_list'];
+    }
+
+}
 
 foreach( $product_item as $checkbox) {
     $sql = "DELETE FROM products WHERE SKU = '$checkbox'";
